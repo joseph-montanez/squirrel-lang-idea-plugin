@@ -48,7 +48,7 @@ public class SquirrelRunningState extends CommandLineState {
 
     public void setParameters(GeneralCommandLine commandLine) throws ExecutionException {
         String parameters = runConfig.getProgramParameters();
-        if (parameters != null && parameters != "") {
+        if (parameters != null && !parameters.isEmpty()) {
             commandLine.withParameters(parameters);
         }
     }
